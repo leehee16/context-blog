@@ -25,6 +25,14 @@ export default function HomePage() {
   return (
     <main className="p-8 text-center">
       <h1 className="text-3xl font-bold mb-4">안녕하세요! </h1>
+      <span style={{ fontFamily: 'Pretendard, Arial, sans-serif' }}>
+        Pretendard 폰트 실험<br />
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+        abcdefghijklmnopqrstuvwxyz<br />
+        0123456789<br />
+        !@#$%^&*()_+-= 한글 테스트
+      </span>
+      <br />
       <p className="mb-2">테스트 중입니다.</p>
       <div className="mt-8 text-left max-w-2xl mx-auto">
         <MarkdownRenderer content={markdown} />

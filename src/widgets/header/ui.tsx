@@ -9,11 +9,11 @@ export default function Header() {
       <div className="flex items-center justify-between max-w-3xl mx-auto">
         <Image src="/vercel.svg" alt="logo" width={50} height={50} />
         <nav className="flex gap-4">
-          <a href="/" className="text-blue-600 hover:underline dark:text-blue-400">info</a>
+          <a href="/info" className="text-blue-600 hover:underline dark:text-blue-400">info</a>
           <span className="mx-2">|</span>
-          <a href="/about" className="text-blue-600 hover:underline dark:text-blue-400">project</a>
+          <a href="/project" className="text-blue-600 hover:underline dark:text-blue-400">project</a>
           <span className="mx-2">|</span>
-          <a href="/about" className="text-blue-600 hover:underline dark:text-blue-400">posts</a>
+          <a href="/posts" className="text-blue-600 hover:underline dark:text-blue-400">posts</a>
           <ThemeToggle />
         </nav>
       </div>
