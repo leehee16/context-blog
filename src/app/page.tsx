@@ -1,9 +1,34 @@
+import MarkdownRenderer from '@/shared/ui/MarkdownRenderer';
+
 export default function HomePage() {
+  const markdown = [
+    '## 마크다운 렌더러 테스트',
+    '',
+    '- [x] 체크박스',
+    '- [ ] 미완료 체크박스',
+    '',
+    '| 표 | 예시 |',
+    '|----|------|',
+    '|  1 |  2   |',
+    '',
+    '```js',
+    "console.log('Hello, world!'); \nconsole.log('안녕, 세상!');",
+    '```',
+    '',
+    '**하이라이트**',
+    '',
+    '~~취소선~~',
+    '',
+    '> 인용문',
+  ].join('\n');
+
   return (
     <main className="p-8 text-center">
-      <h1 className="text-3xl font-bold mb-4">환영합니다! 🎉</h1>
-      <p className="mb-2">이 프로젝트는 FSD(Feature-Sliced Design) 구조로 만들어졌습니다.</p>
-      <p className="text-gray-500">src/shared, src/entities, src/features, src/widgets 폴더를 참고하세요.</p>
+      <h1 className="text-3xl font-bold mb-4">안녕하세요! </h1>
+      <p className="mb-2">테스트 중입니다.</p>
+      <div className="mt-8 text-left max-w-2xl mx-auto">
+        <MarkdownRenderer content={markdown} />
+      </div>
     </main>
   );
 }

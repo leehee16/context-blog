@@ -2,7 +2,8 @@
 
 import './globals.css';
 import type { ReactNode } from 'react';
-import Header from '@/widgets/header/ui';
+import Header from '@/widgets/header';
+import { ThemeProvider } from '@/shared/providers/ThemeProvider';
 
 export const metadata = {
   title: 'Context Blog',
@@ -11,15 +12,21 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
-      <body>
-        <Header />
-        {children} {/* page.tsx 파일 렌더링 */}
+      <body className="bg-white dark:bg-neutral-800">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          <Header />
+          {children} {/* page.tsx 파일 렌더링 */}
+        </ThemeProvider>
       </body>
     </html>
   );
