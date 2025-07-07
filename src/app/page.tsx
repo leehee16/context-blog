@@ -1,42 +1,20 @@
-import MarkdownRenderer from '@/shared/ui/MarkdownRenderer';
+import ManuscriptBackground from '@/entities/manuscriptBackground';
 
 export default function HomePage() {
-  const markdown = [
-    '## 마크다운 렌더러 테스트',
-    '',
-    '- [x] 체크박스',
-    '- [ ] 미완료 체크박스',
-    '',
-    '| 표 | 예시 |',
-    '|----|------|',
-    '|  1 |  2   |',
-    '',
-    '```js',
-    "console.log('Hello, world!'); \nconsole.log('안녕, 세상!');",
-    '```',
-    '',
-    '**하이라이트**',
-    '',
-    '~~취소선~~',
-    '',
-    '> 인용문',
-  ].join('\n');
-
   return (
-    <main className="p-8 text-center">
-      <h1 className="text-3xl font-bold mb-4">안녕하세요! </h1>
-      <span style={{ fontFamily: 'Pretendard, Arial, sans-serif' }}>
-        Pretendard 폰트 실험<br />
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
-        abcdefghijklmnopqrstuvwxyz<br />
-        0123456789<br />
-        !@#$%^&*()_+-= 한글 테스트
-      </span>
-      <br />
-      <p className="mb-2">테스트 중입니다.</p>
-      <div className="mt-8 text-left max-w-2xl mx-auto">
-        <MarkdownRenderer content={markdown} />
-      </div>
+    <main className="flex min-h-screen">
+      {/* 왼쪽 6/10 영역 */}
+      <section className="w-3/5 flex flex-col justify-start items-start bg-white/5 relative overflow-hidden" style={{padding: 0}}>
+        {/* 원고지 배경 */}
+        <ManuscriptBackground width={700} height={700} cellSize={32} lineColor="#bbb" lineWidth={1} style={{opacity:0.25}} />
+        <div className="relative z-10 w-full">
+          <h1 className="text-3xl font-bold p-15">안녕하세요. 이호진입니다.</h1>
+        </div>
+      </section>
+      {/* 오른쪽 4/10 영역 (추후 컨텐츠) */}
+      <section className="w-2/5 bg-white/10 flex items-center justify-center">
+        {/* 오른쪽 컨텐츠 영역 (비워둠) */}
+      </section>
     </main>
   );
 }

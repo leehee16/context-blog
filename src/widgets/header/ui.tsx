@@ -5,15 +5,15 @@ import ThemeToggle from '@/features/theme-toggle';
 
 export default function Header() {
   return (
-    <header className="p-4 border-b border-gray-200 dark:border-neutral-700">
+    <header className="p-2 border-b border-gray-200 dark:border-neutral-700">
       <div className="flex items-center justify-between max-w-3xl mx-auto">
-        <Image src="/vercel.svg" alt="logo" width={50} height={50} />
+        <Image src="/vercel.svg" alt="logo" width={30} height={30} />
         <nav className="flex gap-4">
-          <a href="/info" className="text-blue-600 hover:underline dark:text-blue-400">info</a>
+          <a href="/" className="text-blue-600 hover:underline dark:text-blue-400">info</a>
           <span className="mx-2">|</span>
           <a href="/project" className="text-blue-600 hover:underline dark:text-blue-400">project</a>
           <span className="mx-2">|</span>
-          <a href="/posts" className="text-blue-600 hover:underline dark:text-blue-400">posts</a>
+          <a href="/post/1" className="text-blue-600 hover:underline dark:text-blue-400">posts</a>
           <ThemeToggle />
         </nav>
       </div>
