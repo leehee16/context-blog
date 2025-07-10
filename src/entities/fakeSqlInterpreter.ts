@@ -1,5 +1,5 @@
 export const sampleData = [
-  { id: 1, name: 'Leehojin', signal: 0.8, noise: 0.2, bias: 0.05, insight: 'A' },
+  { id: 1, name: 'Leehojin', signal: 0.8, noise: 0.2, bias: 0.05, insight: '010-6273-9408' },
   { id: 2, name: 'Alice', signal: 0.4, noise: 0.5, bias: 0.2, insight: 'B' },
   { id: 3, name: 'Bob', signal: 0.9, noise: 0.1, bias: 0.18, insight: 'C' },
   { id: 4, name: 'Carol', signal: 0.7, noise: 0.3, bias: 0.12, insight: 'D' },

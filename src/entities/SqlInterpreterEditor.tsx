@@ -4,6 +4,7 @@ import CodeMirror from '@uiw/react-codemirror';
 import { sql } from '@codemirror/lang-sql';
 import { material } from '@uiw/codemirror-theme-material';
 import { fakeQuery } from '@/entities/fakeSqlInterpreter';
+import Card from '@/shared/ui/Card';
 
 const defaultQuery = `WITH observation AS (
   SELECT * FROM context WHERE signal > noise
@@ -22,7 +23,7 @@ const SqlInterpreterEditor: React.FC = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-transparent backdrop-blur-sm p-8 font-mono">
+    <Card className="max-w-2xl mx-auto mt-12">
       <label className="block mb-2 font-semibold text-gray-700 dark:text-gray-200">SQL</label>
       <CodeMirror
         value={query}
@@ -32,7 +33,7 @@ const SqlInterpreterEditor: React.FC = () => {
         onChange={(value) => {
           setQuery(value);
         }}
-        className="mb-4"
+        className="mb-4 bg-transparent !bg-[var(--card-bg)]"
       />
       <button
         className="px-5 py-2 border border-gray-400 bg-white text-gray-700 font-normal rounded-lg hover:bg-gray-100 transition mb-8 text-base shadow-none"
@@ -62,9 +63,9 @@ const SqlInterpreterEditor: React.FC = () => {
           </table>
         </div>
       ) : (
-        <div className="text-gray-400 dark:text-gray-500 text-center mt-8">결과가 없습니다. 쿼리를 입력하고 실행을 눌러보세요.</div>
+        <div className="text-gray-400 dark:text-gray-500 text-center mt-8">실행 ㄱ</div>
       )}
-    </div>
+    </Card>
   );
 };
 

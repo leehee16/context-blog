@@ -82,3 +82,61 @@ body {
 .dark .prose h6 {
   color: #4b5563; /* gray-600 */
 }
+
+
+/* CodeMirror */
+.cm-editor, .cm-scroller {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.cm-gutters {
+  background: transparent !important; /* 거터 전체 배경 */
+  border: none !important;
+}
+.cm-lineNumbers {
+  background: transparent !important; /* 라인 넘버 영역 배경 */
+}
+.cm-gutterElement {
+  color: #888888 !important; /* 라인 넘버 숫자 색상 */
+}
+
+:root {
+	--color-bg: #050505;
+	--color-text: #ffffff;
+	--color-primary: #ff3366;
+	--color-secondary: #3366ff;
+	--color-tertiary: #33ddff;
+	--color-accent: #ffcc00;
+	--card-radius: 4px;
+	--card-bg: rgba(255, 255, 255, 0.06);
+	--card-border: rgba(255, 255, 255, 0.1);
+	--card-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.5);
+	--transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card {
+	position: relative;
+	border-radius: var(--card-radius);
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+	box-shadow: var(--card-shadow);
+	transition: var(--transition);
+	overflow: hidden;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.card-content {
+	position: relative;
+	height: 100%;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.5s ease;
+}
+
+.bg-gradient-main {
+  background: linear-gradient(120deg, #4e206e 0%, #3b3b8f 40%, #2e5a8a 100%);
+}
